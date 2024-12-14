@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Perazim Digital's Anime Recommendation Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Existing styles */
+        body {
+            background-color: black;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .h1-1, .h1-2, .h1-3, .h1-4, .h1-5, .h1-6 {
+            color: #333333;
+            font-size: 35px;
+            text-align: center;
+            margin-top: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        p{
+            font-size: 25px;
+            color: #333333;
+            line-height: 1.6;
+            text-align: justify;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .p-7{
+            font-size: 25px;
+            color: crimson;
+            line-height: 1.6;
+            text-align: justify;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            border-radius: 12px;
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        button {
+            border: none;
+            border-radius: 12px;
+            background-color: crimson;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.6);
+            background-color: darkred;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        .nav-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: crimson;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+        .nav-bar a {
+            color: crimson;
+            margin: 0 15px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .nav-bar a:hover, .nav-bar a.active {
+            color: crimson;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: crimson;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5);
+        }
+        .toggle-dark-mode, .go-back {
+            position: fixed;
+            top: 10px;
+            background-color: crimson;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            z-index: 1000;
+            border-radius: 12px;
+        }
+        .toggle-dark-mode {
+            right: 20px;
+        }
+        .go-back {
+            left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <a href="#kaiju" class="nav-link">Kaiju No. 8</a>
+        <a href="#noragami" class="nav-link">Noragami</a>
+        <a href="#grand-blue" class="nav-link">Grand Blue</a>
+        <a href="#dandadan" class="nav-link">Dandadan</a>
+        <a href="#scissor-seven" class="nav-link">Scissor Seven</a>
+    </div>
+    <button class="toggle-dark-mode">Light Mode</button>
+    <button class="go-back" onclick="goBack()">Go Back</button>
+
+    <!-- Kaiju No. 8 Section -->
+     <div class="Main-Section">
+    <h1 class="h1-1" id="kaiju">Kaiju No. 8</h1>
+    <img src="724-th-072620_Thumbnail_Kaiju8_400x320.jpg" width="640px" alt="Kaiju No.8">
+    <p>Kaiju No. 8 is an exhilarating anime following Kafka Hibino, a man who transforms into a Kaiju after years of cleaning up after monster battles. Now he must fight to keep his dual identity hidden while protecting humanity, delivering an exciting story packed with intense action, deep emotional connections, and stunning visuals.</p>
+    <button><a href="https://youtu.be/JwF7bhvnCxI" target="_blank">Trailer</a></button>
+    <button><a href="https://youtu.be/aso1mQLUAbc" target="_blank">Anime Opening</a></button>
+
+    <!-- Noragami Section -->
+    <h1 class="h1-3" id="noragami">Noragami</h1>
+    <img src="wp1811718.jpg" width="640px" alt="Noragami">
+    <p>Noragami tells the compelling tale of Yato, a minor god without a shrine, who dreams of becoming famous. Alongside Hiyori and Yukine, he navigates battles, divine politics, and his haunting past. This anime beautifully intertwines humor, action, and heartfelt moments with divine lore.</p>
+    <button><a href="https://youtu.be/IQnnwUXd_0U" target="_blank">Trailer</a></button>
+    <button><a href="https://youtu.be/Il7QJbFW8Oo" target="_blank">Anime Opening</a></button>
+
+    <!-- Grand Blue Section -->
+    <h1 class="h1-3" id="grand-blue">Grand Blue</h1>
+    <img src="grand-blue-celebrating-scene-r5wuh1zupjdk2yad.jpg" width="640px" alt="Grand Blue">
+    <p>Grand Blue offers a hilarious slice-of-life experience centered on college student Iori Kitahara. As he navigates friendships and eccentric diving club members, the anime delivers endless laughter, stunning ocean views, and heartfelt camaraderie.</p>
+    <button><a href="https://youtu.be/YILULCpNg9U?si=J6_rywWZi1KvgR0j" target="_blank">Trailer</a></button>
+    <button><a href="https://youtu.be/uabpjLQnArY?si=MXcPh4IywWstPEBL" target="_blank">Anime Opening</a></button>
+
+    <!-- Dandadan Section -->
+    <h1 class="h1-3" id="dandadan">Dandadan</h1>
+    <img src="1372107.jpeg" width="640px" alt="Dandadan">
+    <p>Dandadan is a quirky, supernatural comedy following Momo and Okarun as they encounter bizarre aliens and spirits. This series excels in its blend of over-the-top action, touching character dynamics, and surreal humor.</p>
+    <button><a href="https://youtu.be/0XJxfbN36Uw?si=Zl6ozvJutwVLqkv1" target="_blank">Trailer</a></button>
+    <button><a href="https://youtu.be/a4na2opArGY?si=xg4LHRXKXOAViv9g" target="_blank">Anime Opening</a></button>
+
+    <!-- Scissor Seven Section -->
+    <h1 class="h1-3" id="scissor-seven">Scissor Seven</h1>
+    <img src="Where-to-Watch-Download-Scis-Seven-Season-2.jpeg" width="640px" alt="Scissor Seven">
+    <p>Scissor Seven combines humor, stunning animation, and action-packed storytelling to follow Seven, a scissor-wielding amnesiac barber turned amateur assassin. Its unique style and heartfelt moments make it a standout show.</p>
+    <button><a href="https://youtu.be/WaV2GMIZ3l4?si=R_aQRAqZEfV5ulLk" target="_blank">Trailer</a></button>
+    <button><a href="https://youtu.be/xECvyEcXPVk?si=A-URWjBZDXeBdARC" target="_blank">Anime Opening</a></button>
+
+    <!-- Additional Links -->
+    <p class="p-7">If you want to download any of these anime, visit the website below:</p>
+    <a href="https://www.bing.com/search?pglt=2465&q=Gogoanime&cvid=36d9ce225ecc4754ba23749e37e113d6&gs_lcrp=EgZjaHJvbWUyBggAEEUYOzIGCAEQRRg5MgYIAhAAGEAyBggDEAAYQDIGCAQQABhAMgYIBRAAGEAyBggGEAAYQDIGCAcQABhAMgYICBAAGEDSAQkxMDM2MWowajGoAgCwAgA&FORM=ANNTA1&PC=U531#">Gogoanime</a>
+    </div>
+    <button class="back-to-top">↑</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const links = document.querySelectorAll(".nav-link");
+            const sections = document.querySelectorAll("h1, p, p-7, img");
+            const backToTop = document.querySelector(".back-to-top");
+            let timer;
+
+            // Back to top button
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 200) {
+                    backToTop.style.display = "block";
+                } else {
+                    backToTop.style.display = "none";
+                }
+            });
+
+            backToTop.addEventListener("click", () => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+
+            // Smooth scroll to section on nav link click
+            links.forEach(link => {
+                link.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    const target = document.querySelector(link.getAttribute("href"));
+                    window.scrollTo({
+                        top: target.offsetTop - 100,
+                        behavior: "smooth"
+                    });
+                });
+            });
+
+            // Fade in effect for content
+            window.addEventListener("scroll", () => {
+                sections.forEach(section => {
+                    if (window.scrollY + window.innerHeight >= section.offsetTop + 100) {
+                        section.style.opacity = 1;
+                        section.style.transform = "translateY(0)";
+                    }
+                });
+            });
+
+            // Dark mode toggle
+            const darkModeBtn = document.querySelector(".toggle-dark-mode");
+            let darkMode = true;
+            darkModeBtn.addEventListener("click", () => {
+                document.body.style.backgroundColor = darkMode ? "white" : "black";
+                document.body.style.color = darkMode ? "black" : "white";
+                darkModeBtn.textContent = darkMode ? "Dark Mode" : "Light Mode";
+                darkMode = !darkMode;
+            });
+        });
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perazim Digital's Anime Recommendation Website</title>
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("1372107.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Profile Picture Styling */
+        .profile-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            text-align: center;
+        }
+
+        .profile-picture {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            object-fit: cover;
+        }
+
+        .upload-label {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #fff;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        /* Container for page content */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            max-height: 700px;
+        }
+
+        h1 {
+            font-family: 'Cursive', monospace;
+            font-size: 3rem;
+            color: #f2f2f2;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 20px 0;
+            color: #e0e0e0;
+        }
+
+        .button-1, .button-2 {
+            background-color: crimson;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            font-size: 1.2rem;
+            padding: 15px 25px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+            width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        .button-1:hover, .button-2:hover {
+            background-color: darkred;
+        }
+
+        /* Form input styles */
+        .input-1, .input-2, .input-3 {
+            padding: 10px;
+            margin: 10px 0;
+            background-color: crimson;
+            color: #fff;
+            border-radius: 5px;
+            width: 80%;
+            font-size: 1rem;
+            border: none;
+        }
+
+        /* Sticky Navbar Styling */
+        .sticky-navbar {
+            position: sticky;
+            top: 0;
+            background-color: #333;
+            padding: 15px 0;
+            text-align: center;
+            z-index: 100;
+        }
+
+        .sticky-navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 30px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s;
+        }
+
+        .sticky-navbar a:hover {
+            background-color: #575757;
+        }
+
+        /* Scroll to Top Button */
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 55px;
+            right: 30px;
+            display: none;
+            background-color: crimson;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .button-1, .button-2 {
+                width: 90%;
+                font-size: 1.1rem;
+            }
+
+            .input-1, .input-2 {
+                width: 90%;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Profile Picture Section -->
+    <div class="profile-container">
+        <img id="profilePic" class="profile-picture" src="default-profile.png" alt="Profile Picture">
+        <label for="uploadPic" class="upload-label">Upload Profile Picture</label>
+        <input type="file" id="uploadPic" accept="image/*" style="display: none;">
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Welcome to Perazim Digital's Anime Recommendation Website</h1>
+        <p>You're just a few steps away from discovering some of the best anime. Please sign up to get started!</p>
+
+        <!-- Sign Up Form -->
+        <input class="input-1" type="text" placeholder="Username">
+        <input class="input-2" type="password" placeholder="Password">
+        <input class="input-3" type="email" placeholder="Enter Email Here">
+        <button class="button-1">Sign Up!</button>
+
+        <p>Modern anime has evolved into a globally recognized art form, blending diverse storytelling with stunning visuals. Explore genres from action, romance, fantasy to slice-of-life and more.</p>
+
+        <p>Let's begin your anime adventure. Click below to move to the next page!</p>
+        <button class="button-2" id="nextPageButton">Next Page</button>
+    </div>
+
+    <!-- Sticky Navbar -->
+    <div class="sticky-navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn">↑</button>
+
+    <script>
+        // Profile Picture Upload Functionality
+        const uploadPic = document.getElementById('uploadPic');
+        const profilePic = document.getElementById('profilePic');
+
+        profilePic.addEventListener('click', () => {
+            uploadPic.click();
+        });
+
+        uploadPic.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    profilePic.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Sign Up Button Click
+        const signUpButton = document.querySelector('.button-1');
+        const nextPageButton = document.querySelector('#nextPageButton');
+        const usernameInput = document.querySelector('.input-1');
+        const passwordInput = document.querySelector('.input-2');
+        const emailInput = document.querySelector('.input-3');
+
+        signUpButton.addEventListener('click', () => {
+            const username = usernameInput.value.trim();
+            const password = passwordInput.value.trim();
+            const email = emailInput.value.trim();
+            if (username === '' || password === '' || email === "") {
+                alert('Please enter a username, password, and your email!');
+            } else if (password.length < 6) {
+                alert('Password must be at least 6 characters long.');
+            } else {
+                alert(`Welcome, ${username}! Your account has been created.`);
+                usernameInput.value = '';
+                passwordInput.value = '';
+                emailInput.value = '';
+            }
+        });
+
+        // Handle Next Page Button Click
+        nextPageButton.addEventListener('click', () => {
+            window.location.href = 'Nextpage.html';
+        });
+
+        // Scroll to Top Button
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById('scrollToTopBtn').style.display = 'block';
+            } else {
+                document.getElementById('scrollToTopBtn').style.display = 'none';
+            }
+        };
+
+        document.getElementById('scrollToTopBtn').addEventListener('click', function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    </script>
+</body>
+</html>

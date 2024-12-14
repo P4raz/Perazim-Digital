@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Perazim Digital's Anime Recommendation Website</title>
+<style>
+    body {
+            background-image: url("my-hero-academia-deku-wallpaper.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: whitesmoke;
+            transition: background-color 0.5s;
+        }
+
+        body::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+            z-index: -1;
+        }
+
+        .h1-1 {
+            font-family: monospace;
+            font-size: 35px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .p-1, .p-2, .p-3, .p-4 {
+            font-family: monospace;
+            font-size: 20px;
+            line-height: 1.6;
+            margin: 20px 50px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .p-highlight {
+            background-color: rgba(255, 255, 255, 0.3);
+            color: black;
+        }
+
+        .button-1, .button-2 {
+            background-color: crimson;
+            color: whitesmoke;
+            font-size: 16px;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 20px auto;
+            display: block;
+            position: relative;
+        }
+
+        .button-1:hover, .button-2:hover {
+            background-color: darkred;
+            transform: scale(1.1);
+        }
+
+        .font-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .font-buttons button {
+            padding: 10px;
+            margin: 5px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .font-buttons button:hover {
+            background-color: #45a049;
+        }
+
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 20px;
+            margin: 20px 50px;
+        }
+
+        .carousel img {
+            border-radius: 10px;
+            max-height: 200px;
+        }
+
+        .feedback-form {
+            margin: 20px auto;
+            width: 80%;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+        }
+
+        .feedback-form input, .feedback-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 7px;
+            border: 1px solid #ddd;
+        }
+
+        .feedback-form button {
+            background-color:crimson;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .feedback-form button:hover {
+            background-color: #45a049;
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 50px;
+        }
+
+        .navigation-buttons a {
+            background-color: crimson;
+            color: whitesmoke;
+            font-size: 16px;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .navigation-buttons a:hover {
+            background-color: darkred;
+            transform: scale(1.1);
+        }
+        .Competition{
+            left: 20px;
+        }
+        .Nextpage{
+            right: 20px;
+        }
+</style>        
+</head>
+<body>
+    <div class="progress-bar" id="progressBar">
+
+    <h1 class="h1-1">The History Of Anime</h1>
+    <p class="p-1">Anime, a term derived from the English word "animation," refers to a style of Japanese animated productions that has become a cultural phenomenon worldwide. Its origins trace back to the early 20th century, with the first known Japanese animation, <em>Namakura Gatana</em>, created in 1917. During the 1920s and 1930s, anime gained momentum as Japanese animators drew inspiration from Western animation pioneers like Walt Disney and Max Fleischer. The release of <em>Momotaro: Umi no Shinpei</em> in 1945, a wartime propaganda film, marked Japan's first feature-length anime. However, anime as a distinct artistic and storytelling medium began to flourish post-World War II, with Osamu Tezuka often hailed as the "God of Manga and Anime" for his groundbreaking work <em>Astro Boy</em> in the 1960s. This era introduced the characteristic large, expressive eyes and imaginative narratives that became hallmarks of the genre.</p>
+    
+    <p class="p-2">Over the decades, anime has expanded into a multitude of genres, catering to diverse audiences. From action-packed series like <em>Dragon Ball Z</em> and <em>Attack on Titan</em> to heartwarming romances like <em>Your Lie in April</em>, and thought-provoking science fiction masterpieces like <em>Ghost in the Shell</em>, anime's versatility is unmatched. Slice-of-life stories such as <em>Clannad</em> delve into human emotions and relationships, while genres like isekai transport characters to fantastical worlds, as seen in <em>Sword Art Online</em>. Horror and psychological thrillers like <em>Death Note</em> explore darker themes, captivating viewers with complex narratives. The broad spectrum of genres ensures that anime resonates with children, teens, and adults alike, making it a versatile medium for storytelling.</p>
+    
+    <p class="p-3">Music plays a vital role in anime, often elevating the narrative experience. Iconic theme songs and soundtracks, such as those from <em>Naruto</em> or Studio Ghibli films, have become cultural touchstones. Japanese bands and artists frequently gain international recognition through anime openings and endings. Yoko Kanno's compositions for <em>Cowboy Bebop</em> brought jazz into the limelight, while Hiroyuki Sawano's epic scores for <em>Attack on Titan</em> added gravitas to the series. These musical elements not only enhance the storytelling but also cultivate a global appreciation for Japanese music, helping it gain a firm foothold in pop culture.</p>
+    
+    <p class="p-4">Anime’s influence on society is profound, transcending Japan’s borders to leave a lasting impact worldwide. It has inspired countless artists, filmmakers, and designers while fostering global fandoms through conventions like Anime Expo and Comic-Con. Themes of perseverance, friendship, and moral dilemmas often resonate universally, while anime's unique art style has influenced fashion, graphic design, and gaming. Moreover, anime has also served as a gateway for international audiences to explore Japanese culture, language, and traditions. Today, platforms like Netflix and Crunchyroll ensure that anime is more accessible than ever, solidifying its position as a global cultural force.</p>
+    </div>
+
+    <!-- Feedback Form -->
+    <div class="feedback-form">
+        <h2>Submit Your Feedback</h2>
+        <input type="text" id="name" placeholder="Your Name">
+        <textarea id="feedback" placeholder="Your Feedback"></textarea>
+        <button id="submitFeedback">Submit</button>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="navigation-buttons">
+        <a class="Competition" href="Perazim Digital's Anime Recommendation Website.html">Previous Page</a>
+        <a class= "Nextpage" href="Nextpage2.html">Next Page</a>
+    </div>
+
+    <script>
+        document.getElementById("submitFeedback").addEventListener("click", () => {
+            const name = document.getElementById("name").value;
+            const feedback = document.getElementById("feedback").value;
+            if (name && feedback) {
+                alert(`Thank you, ${name}, for your feedback!`);
+            } else {
+                alert("Please fill out all fields.");
+            }
+        });
+    </script>
+</body>
+</html>
